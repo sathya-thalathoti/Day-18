@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  line-height: 1.5;
+  /* color: #f8f8f8; */
+}
+
+body {
+  /* padding: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 5%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 2fr;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* gap: 10px; */
+}
+
+.item {
+  height: 100%;
+  border: 2px solid black;
+}
+
+header {
+  /* grid-column: 1/4 ; */
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #f1d9e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  background-color: #abe3e7;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu li {
+  border: 2px solid black;
+  height: 11vh;
+  text-align: center;
+  padding-top: 12px;
+  /* flex: 1 0 100%; */
+}
+
+.menu li:hover {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 1);
+  /* padding-bottom: 10px;
+  /* background-color: #b6e3c0; */
+  /* border-color:#b6e3c0; */
+}
+
+main {
+  background-color: #edbfa5;
+  padding: 20px;
+}
+
+.button {
+  width: 100px;
+  border: 1px solid black;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #b6e3c0;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.button:active {
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+p {
+  text-align: justify;
+}
+
+figcaption span {
+  display: block;
+  font-style: italic;
+  font-size: 10px;
+  color: gray;
+}
+
+article h2 + p {
+  color: grey;
+}
+
+aside {
+  background-color: #fbe6af;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+aside span {
+  color: grey;
+  padding-bottom: 10px;
+  display: inline-block;
+  border-bottom: 2px solid black;
+}
+
+aside li {
+  margin: 15px;
+}
+
+a:link,
+a:visited {
+  color: violet;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  grid-column: 1/4;
+  background-color: #e7f6e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.footer:first-of-type {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.footer:hover {
+  text-decoration: underline;
+}
+
+/* .img{
+  display: flex;
+  flex-direction: column;
+} */
+
+img {
+  height: 300px;
+  width: 300px;
+  border: 4px solid black;
+  /* background-image: url(https://static01.nyt.com/images/2023/12/28/multimedia/24REDCARPET-hvbt/24REDCARPET-hvbt-mobileMasterAt3x.jpg?quality=75&auto=webp&disable=upscale&width=1200); */
+  /* object-fit: cover;
+  object-position: -50px -200px; */
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+h4 {
+  display: none;
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .container {
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 3fr;
+  }
+
+  h4 {
+    display: block;
+    text-align: center;
+    padding: 5%;
+  }
+
+  figure {
+    float: none;
+  }
+
+  .menu {
+    display: none;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    flex: 1 0 100%; */
+  }
+  .button {
+    margin: 10px 20px;
+  }
+  nav {
+    grid-column: 1/4;
+  }
+  main {
+    grid-column: 1/3;
+  }
+}
+
+@media (max-width: 499px) {
+  .container {
+    grid-template-rows: 1fr 1fr 4fr 4fr 1fr;
+  }
+  nav {
+    grid-column: 1/4;
+  }
+  main {
+    grid-column: 1/4;
+  }
+  aside {
+    grid-row-start: 4;
+    grid-column: 1/4;
+  }
+  h4 {
+    display: block;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .menu {
+    display: none;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    flex: 1 0 100%; */
+  }
+
+  figure {
+    float: none;
+  }
+
+  .button {
+    margin: 10px 20px;
+  }
+}
